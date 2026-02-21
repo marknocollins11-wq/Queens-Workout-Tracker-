@@ -3,22 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goddess Workout Tracker 🌿</title>
+<title>Goddess Workout 👑</title>
+<!-- iPhone home screen icon & PWA -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="My Workout">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIiBmaWxsPSIjRkNFNEVDIi8+PHJlY3QgeD0iMjAiIHk9IjExMCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0MCIgcng9IjgiIGZpbGw9IiNGNUM4NDIiLz48cGF0aCBkPSJNMzAgMTEwIEw0NSA1MCBMNzAgODUgTDkwIDMwIEwxMTAgODUgTDEzNSA1MCBMMTUwIDExMCBaIiBmaWxsPSIjRjVDODQyIiBzdHJva2U9IiNBNjc4MDAiIHN0cm9rZS13aWR0aD0iMyIvPjxjaXJjbGUgY3g9IjkwIiBjeT0iMzIiIHI9IjEyIiBmaWxsPSIjRTkxRThDIi8+PGNpcmNsZSBjeD0iNDUiIGN5PSI1MiIgcj0iOSIgZmlsbD0iI0U5MUU4QyIvPjxjaXJjbGUgY3g9IjEzNSIgY3k9IjUyIiByPSI5IiBmaWxsPSIjRTkxRThDIi8+PGVsbGlwc2UgY3g9IjkwIiBjeT0iODUiIHJ4PSIxNSIgcnk9IjIyIiBmaWxsPSIjRTkxRThDIiBzdHJva2U9IiM4ODBFNEYiIHN0cm9rZS13aWR0aD0iMiIvPjxlbGxpcHNlIGN4PSI1NiIgY3k9IjkwIiByeD0iMTEiIHJ5PSIxNiIgZmlsbD0iI0U5MUU4QyIgc3Ryb2tlPSIjODgwRTRGIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxlbGxpcHNlIGN4PSIxMjQiIGN5PSI5MCIgcng9IjExIiByeT0iMTYiIGZpbGw9IiNFOTFFOEMiIHN0cm9rZT0iIzg4MEU0RiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI5MCIgY3k9Ijc4IiByPSI1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ii8+PHRleHQgeD0iOTAiIHk9IjE2NSIgZm9udC1zaXplPSIyMiIgZmlsbD0iI0U5MUU4QyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNlcmlmIj7inYU8L3RleHQ+PC9zdmc+">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIiBmaWxsPSIjRkNFNEVDIi8+PHJlY3QgeD0iMjAiIHk9IjExMCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0MCIgcng9IjgiIGZpbGw9IiNGNUM4NDIiLz48cGF0aCBkPSJNMzAgMTEwIEw0NSA1MCBMNzAgODUgTDkwIDMwIEwxMTAgODUgTDEzNSA1MCBMMTUwIDExMCBaIiBmaWxsPSIjRjVDODQyIiBzdHJva2U9IiNBNjc4MDAiIHN0cm9rZS13aWR0aD0iMyIvPjxjaXJjbGUgY3g9IjkwIiBjeT0iMzIiIHI9IjEyIiBmaWxsPSIjRTkxRThDIi8+PGNpcmNsZSBjeD0iNDUiIGN5PSI1MiIgcj0iOSIgZmlsbD0iI0U5MUU4QyIvPjxjaXJjbGUgY3g9IjEzNSIgY3k9IjUyIiByPSI5IiBmaWxsPSIjRTkxRThDIi8+PGVsbGlwc2UgY3g9IjkwIiBjeT0iODUiIHJ4PSIxNSIgcnk9IjIyIiBmaWxsPSIjRTkxRThDIiBzdHJva2U9IiM4ODBFNEYiIHN0cm9rZS13aWR0aD0iMiIvPjxlbGxpcHNlIGN4PSI1NiIgY3k9IjkwIiByeD0iMTEiIHJ5PSIxNiIgZmlsbD0iI0U5MUU4QyIgc3Ryb2tlPSIjODgwRTRGIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxlbGxpcHNlIGN4PSIxMjQiIGN5PSI5MCIgcng9IjExIiByeT0iMTYiIGZpbGw9IiNFOTFFOEMiIHN0cm9rZT0iIzg4MEU0RiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI5MCIgY3k9Ijc4IiByPSI1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ii8+PHRleHQgeD0iOTAiIHk9IjE2NSIgZm9udC1zaXplPSIyMiIgZmlsbD0iI0U5MUU4QyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNlcmlmIj7inYU8L3RleHQ+PC9zdmc+">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --sky:       #AEE0F5;
-    --sky-deep:  #5AAFD4;
-    --sky-pale:  #E8F6FD;
-    --pink:      #F48FB1;
-    --pink-deep: #D81B7A;
-    --pink-soft: #FCE4EC;
-    --heart:     #E91E8C;
-    --dark-text: #1C3040;
-    --mid-text:  #2E4A5C;
-    --bg:        #EBF5FA;
-    --olive:     #6B7F44;
-    --olive-lt:  #A4B86A;
+    --sky:        #AEE0F5;
+    --sky-deep:   #4AA8CF;
+    --sky-pale:   #E4F4FC;
+    --pink:       #F48FB1;
+    --pink-deep:  #E91E8C;
+    --pink-soft:  #FCE4EC;
+    --heart:      #F06292;
+    --dark-text:  #1C3040;
+    --mid-text:   #3A5A6E;
+    --bg:         #EBF7FB;
+    --white-card: rgba(255,255,255,0.82);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,280 +38,196 @@
 
   body::before {
     content: '';
-    position: fixed;
-    inset: 0;
+    position: fixed; inset: 0;
     background:
-      radial-gradient(ellipse at 10% 5%,  rgba(174,224,245,0.7) 0%, transparent 50%),
-      radial-gradient(ellipse at 90% 90%, rgba(244,143,177,0.4) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 45%, rgba(255,255,255,0.5) 0%, transparent 65%);
-    pointer-events: none;
-    z-index: 0;
+      radial-gradient(ellipse at 8%  5%,  rgba(174,224,245,0.75) 0%, transparent 48%),
+      radial-gradient(ellipse at 92% 92%, rgba(244,143,177,0.45) 0%, transparent 48%),
+      radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.45) 0%, transparent 60%);
+    pointer-events: none; z-index: 0;
   }
 
   body::after {
     content: '';
-    position: fixed;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(90,175,212,0.12) 1px, transparent 1px);
-    background-size: 28px 28px;
-    pointer-events: none;
-    z-index: 0;
+    position: fixed; inset: 0;
+    background-image: radial-gradient(circle, rgba(74,168,207,0.09) 1px, transparent 1px);
+    background-size: 26px 26px;
+    pointer-events: none; z-index: 0;
   }
 
   .container {
-    position: relative;
-    z-index: 1;
+    position: relative; z-index: 1;
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px 16px 60px;
+    padding: 16px 16px 60px;
   }
 
-  /* ── Header ── */
-  .header {
-    text-align: center;
-    padding: 36px 0 26px;
-  }
+  .header { text-align: center; padding: 28px 0 22px; }
 
   .goddess-crown {
-    display: block;
-    margin: 0 auto 14px;
-    width: 210px;
-    height: 100px;
+    display: block; margin: 0 auto 12px;
+    width: 320px; height: 170px;
+    filter: drop-shadow(0 6px 18px rgba(180,120,0,0.28));
   }
 
   .header h1 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(22px, 5.5vw, 46px);
+    font-size: clamp(22px, 5.5vw, 44px);
     font-weight: 900;
-    background: linear-gradient(135deg, var(--sky-deep), var(--heart), var(--sky-deep));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, var(--sky-deep), var(--pink-deep), var(--sky-deep));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: 5px;
-    line-height: 1.15;
+    letter-spacing: 5px; line-height: 1.15;
   }
 
   .header-sub {
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 18px;
-    color: var(--heart);
-    opacity: 0.7;
-    margin-top: 6px;
-    letter-spacing: 3px;
+    font-style: italic; font-size: 18px;
+    color: var(--heart); opacity: 0.8;
+    margin-top: 6px; letter-spacing: 3px;
   }
 
   .hearts-row {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin: 14px 0 0;
-    font-size: 22px;
-    color: var(--heart);
+    display: flex; justify-content: center;
+    gap: 8px; margin: 14px 0 0;
+    font-size: 24px; color: var(--heart);
     animation: pulse-hearts 2.2s ease-in-out infinite;
   }
 
   @keyframes pulse-hearts {
     0%, 100% { transform: scale(1); }
-    50%       { transform: scale(1.13); }
+    50%       { transform: scale(1.14); }
   }
 
-  /* ── Divider ── */
   .divider {
     height: 1px;
     background: linear-gradient(to right, transparent, var(--sky-deep), var(--pink), transparent);
-    margin: 22px 0;
-    position: relative;
+    margin: 20px 0; position: relative;
   }
   .divider::after {
     content: '✿';
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    position: absolute; left: 50%; top: 50%;
     transform: translate(-50%, -50%);
-    background: var(--bg);
-    padding: 0 14px;
-    color: var(--heart);
-    font-size: 18px;
+    background: var(--bg); padding: 0 14px;
+    color: var(--heart); font-size: 18px;
   }
 
-  /* ── Tabs ── */
   .tab-bar {
     display: flex;
-    border: 1.5px solid rgba(90,175,212,0.35);
-    border-radius: 40px;
-    overflow: hidden;
+    border: 1.5px solid rgba(74,168,207,0.3);
+    border-radius: 40px; overflow: hidden;
     margin-bottom: 24px;
     background: rgba(255,255,255,0.65);
     backdrop-filter: blur(8px);
   }
 
   .tab-btn {
-    flex: 1;
-    background: transparent;
-    border: none;
-    color: var(--sky-deep);
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    letter-spacing: 2px;
-    padding: 13px;
-    cursor: pointer;
-    transition: all 0.3s;
+    flex: 1; background: transparent; border: none;
+    color: var(--sky-deep); font-family: 'Cinzel', serif;
+    font-size: 13px; letter-spacing: 2px;
+    padding: 13px; cursor: pointer; transition: all 0.3s;
   }
-
-  .tab-btn:first-child { border-right: 1.5px solid rgba(90,175,212,0.25); }
-
+  .tab-btn:first-child { border-right: 1.5px solid rgba(74,168,207,0.2); }
   .tab-btn.active {
-    background: linear-gradient(135deg, var(--heart), var(--pink));
-    color: white;
-    border-radius: 38px;
+    background: linear-gradient(135deg, var(--pink-deep), var(--pink));
+    color: white; border-radius: 38px;
   }
-
   .tab-btn:not(.active):hover { background: rgba(174,224,245,0.3); }
 
-  /* ── Meta Cards ── */
   .workout-meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 24px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px; margin-bottom: 24px;
   }
-
   .meta-card {
-    background: rgba(255,255,255,0.78);
+    background: var(--white-card);
     border: 1.5px solid rgba(174,224,245,0.55);
-    border-radius: 14px;
-    padding: 14px 16px;
-    box-shadow: 0 2px 12px rgba(90,175,212,0.1);
+    border-radius: 14px; padding: 14px 16px;
+    box-shadow: 0 2px 12px rgba(74,168,207,0.1);
     backdrop-filter: blur(6px);
   }
-
   .meta-label {
-    font-size: 9px;
-    letter-spacing: 3px;
-    color: var(--sky-deep);
-    text-transform: uppercase;
-    font-family: 'Cinzel', serif;
-    margin-bottom: 5px;
-    opacity: 0.8;
+    font-size: 9px; letter-spacing: 3px; color: var(--sky-deep);
+    text-transform: uppercase; font-family: 'Cinzel', serif;
+    margin-bottom: 5px; opacity: 0.8;
   }
+  .meta-value { font-size: 16px; color: var(--dark-text); font-style: italic; }
 
-  .meta-value {
-    font-size: 16px;
-    color: var(--dark-text);
-    font-style: italic;
-  }
-
-  /* ── Exercise Cards ── */
   .exercises-section h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: var(--sky-deep);
-    text-align: center;
-    margin-bottom: 16px;
-    opacity: 0.75;
+    font-family: 'Cinzel', serif; font-size: 11px;
+    letter-spacing: 5px; color: var(--sky-deep);
+    text-align: center; margin-bottom: 16px; opacity: 0.75;
   }
 
   .exercise-card {
-    background: rgba(255,255,255,0.82);
+    background: var(--white-card);
     border: 1.5px solid rgba(174,224,245,0.5);
-    border-radius: 14px;
-    margin-bottom: 14px;
-    overflow: hidden;
-    box-shadow: 0 2px 14px rgba(90,175,212,0.09);
+    border-radius: 14px; margin-bottom: 14px; overflow: hidden;
+    box-shadow: 0 2px 14px rgba(74,168,207,0.09);
     transition: border-color 0.3s, box-shadow 0.3s;
   }
-
   .exercise-card:hover {
-    border-color: rgba(216,27,122,0.3);
-    box-shadow: 0 4px 20px rgba(216,27,122,0.09);
+    border-color: rgba(233,30,140,0.28);
+    box-shadow: 0 4px 20px rgba(233,30,140,0.08);
   }
 
   .exercise-header {
-    display: flex;
-    align-items: center;
+    display: flex; align-items: center;
     padding: 13px 16px;
-    background: linear-gradient(to right, rgba(232,246,253,0.85), rgba(252,228,236,0.55));
-    gap: 10px;
-    cursor: pointer;
+    background: linear-gradient(to right, rgba(228,244,252,0.9), rgba(252,228,236,0.55));
+    gap: 10px; cursor: pointer;
   }
-
-  .exercise-heart { color: var(--heart); font-size: 16px; flex-shrink: 0; }
+  .exercise-heart { color: var(--heart); font-size: 17px; flex-shrink: 0; }
 
   .exercise-name-input {
-    flex: 1;
-    background: transparent;
-    border: none;
+    flex: 1; background: transparent; border: none;
     color: var(--dark-text);
     font-family: 'Playfair Display', serif;
-    font-size: 17px;
-    font-style: italic;
-    outline: none;
-    width: 100%;
+    font-size: 17px; font-style: italic;
+    outline: none; width: 100%;
   }
-
   .exercise-name-input::placeholder { color: rgba(44,80,100,0.28); }
 
   .exercise-body { padding: 14px 16px; display: none; }
   .exercise-body.open { display: block; }
 
   .exercise-toggle {
-    background: none;
-    border: none;
-    color: var(--sky-deep);
-    font-size: 18px;
-    cursor: pointer;
-    padding: 0 4px;
-    transition: transform 0.3s;
-    flex-shrink: 0;
+    background: none; border: none;
+    color: var(--sky-deep); font-size: 18px;
+    cursor: pointer; padding: 0 4px;
+    transition: transform 0.3s; flex-shrink: 0;
   }
   .exercise-toggle.open { transform: rotate(180deg); }
 
-  /* ── Sets Table ── */
   .sets-table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
-
   .sets-table th {
-    font-family: 'Cinzel', serif;
-    font-size: 8px;
-    letter-spacing: 2px;
-    color: var(--sky-deep);
-    opacity: 0.65;
-    text-align: center;
-    padding: 0 4px 8px;
-    text-transform: uppercase;
+    font-family: 'Cinzel', serif; font-size: 8px;
+    letter-spacing: 2px; color: var(--sky-deep);
+    opacity: 0.65; text-align: center;
+    padding: 0 4px 8px; text-transform: uppercase;
   }
-
-  .sets-table td { padding: 4px 4px; text-align: center; }
+  .sets-table td { padding: 4px; text-align: center; }
 
   .sets-table input[type="number"] {
     width: 100%;
-    background: rgba(232,246,253,0.7);
+    background: rgba(228,244,252,0.7);
     border: 1.5px solid rgba(174,224,245,0.5);
-    border-radius: 6px;
-    color: var(--dark-text);
+    border-radius: 6px; color: var(--dark-text);
     font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-    text-align: center;
-    padding: 6px 4px;
-    outline: none;
+    font-size: 15px; text-align: center;
+    padding: 6px 4px; outline: none;
     transition: border-color 0.2s, background 0.2s;
     -moz-appearance: textfield;
   }
-
   .sets-table input::-webkit-outer-spin-button,
   .sets-table input::-webkit-inner-spin-button { -webkit-appearance: none; }
-
   .sets-table input:focus {
-    border-color: var(--pink);
+    border-color: var(--heart);
     background: rgba(252,228,236,0.45);
   }
 
-  .last-val { font-size: 12px; color: var(--heart); opacity: 0.5; font-style: italic; }
-
+  .last-val { font-size: 12px; color: var(--heart); opacity: 0.6; font-style: italic; }
   .del-set-btn {
     background: none; border: none;
-    color: rgba(216,27,122,0.28); cursor: pointer;
+    color: rgba(240,98,146,0.3); cursor: pointer;
     font-size: 14px; padding: 4px; transition: color 0.2s;
   }
   .del-set-btn:hover { color: var(--heart); }
@@ -314,174 +235,142 @@
   .add-set-btn {
     background: transparent;
     border: 1.5px dashed rgba(174,224,245,0.65);
-    color: var(--sky-deep);
-    font-family: 'Cinzel', serif;
-    font-size: 9px;
-    letter-spacing: 2px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    transition: all 0.2s;
+    color: var(--sky-deep); font-family: 'Cinzel', serif;
+    font-size: 9px; letter-spacing: 2px;
+    padding: 8px 16px; border-radius: 8px;
+    cursor: pointer; width: 100%; transition: all 0.2s;
   }
-  .add-set-btn:hover { background: rgba(174,224,245,0.2); border-color: var(--sky-deep); }
+  .add-set-btn:hover { background: rgba(174,224,245,0.22); border-color: var(--sky-deep); }
 
   .exercise-notes {
     width: 100%;
-    background: rgba(232,246,253,0.5);
+    background: rgba(228,244,252,0.5);
     border: 1.5px solid rgba(174,224,245,0.4);
-    border-radius: 8px;
-    color: var(--mid-text);
+    border-radius: 8px; color: var(--mid-text);
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 14px;
-    padding: 8px 10px;
-    resize: none;
-    outline: none;
-    margin-top: 10px;
+    font-style: italic; font-size: 14px;
+    padding: 8px 10px; resize: none; outline: none; margin-top: 10px;
   }
 
-  /* ── Buttons ── */
   .actions { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
 
   .btn-pink {
     flex: 1; min-width: 140px;
-    background: linear-gradient(135deg, var(--heart), var(--pink));
+    background: linear-gradient(135deg, var(--pink-deep), var(--pink));
     border: none; color: white;
-    font-family: 'Cinzel', serif;
-    font-size: 11px; letter-spacing: 3px;
-    padding: 14px 20px; border-radius: 30px; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: 11px;
+    letter-spacing: 3px; padding: 14px 20px;
+    border-radius: 30px; cursor: pointer;
     transition: all 0.3s; text-transform: uppercase;
-    box-shadow: 0 3px 14px rgba(216,27,122,0.28);
+    box-shadow: 0 3px 14px rgba(233,30,140,0.28);
   }
-  .btn-pink:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(216,27,122,0.38); }
+  .btn-pink:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(233,30,140,0.42); }
 
   .btn-sky {
     flex: 1; min-width: 140px;
     background: linear-gradient(135deg, var(--sky-deep), var(--sky));
     border: none; color: var(--dark-text);
-    font-family: 'Cinzel', serif;
-    font-size: 11px; letter-spacing: 3px;
-    padding: 14px 20px; border-radius: 30px; cursor: pointer;
-    transition: all 0.3s; font-weight: 700; text-transform: uppercase;
-    box-shadow: 0 3px 14px rgba(90,175,212,0.25);
+    font-family: 'Cinzel', serif; font-size: 11px;
+    letter-spacing: 3px; padding: 14px 20px;
+    border-radius: 30px; cursor: pointer;
+    transition: all 0.3s; font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 3px 14px rgba(74,168,207,0.25);
   }
-  .btn-sky:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(90,175,212,0.4); }
+  .btn-sky:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(74,168,207,0.42); }
 
   .btn-ghost {
     flex: 1; min-width: 140px;
     background: rgba(255,255,255,0.7);
-    border: 1.5px solid rgba(174,224,245,0.6);
-    color: var(--sky-deep);
-    font-family: 'Cinzel', serif;
+    border: 1.5px solid rgba(174,224,245,0.65);
+    color: var(--sky-deep); font-family: 'Cinzel', serif;
     font-size: 10px; letter-spacing: 2px;
-    padding: 12px 20px; border-radius: 30px; cursor: pointer;
-    transition: all 0.3s; text-transform: uppercase;
+    padding: 12px 20px; border-radius: 30px;
+    cursor: pointer; transition: all 0.3s; text-transform: uppercase;
   }
   .btn-ghost:hover { background: rgba(174,224,245,0.22); border-color: var(--sky-deep); }
 
-  /* ── History ── */
   .history-section { margin-top: 32px; }
-  .history-section h2,
-  .progress-section h2,
-  .cycle-section h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 11px; letter-spacing: 4px;
-    color: var(--sky-deep); text-align: center;
-    margin-bottom: 16px; opacity: 0.75;
+  .history-section h2, .progress-section h2, .cycle-section h2 {
+    font-family: 'Cinzel', serif; font-size: 11px;
+    letter-spacing: 4px; color: var(--sky-deep);
+    text-align: center; margin-bottom: 16px; opacity: 0.75;
   }
 
   .history-entry {
-    background: rgba(255,255,255,0.75);
+    background: var(--white-card);
     border: 1.5px solid rgba(174,224,245,0.4);
-    border-radius: 12px;
-    padding: 13px 16px; margin-bottom: 9px;
-    position: relative;
-    box-shadow: 0 2px 10px rgba(90,175,212,0.07);
+    border-radius: 12px; padding: 13px 16px;
+    margin-bottom: 9px; position: relative;
+    box-shadow: 0 2px 10px rgba(74,168,207,0.07);
   }
-
-  .history-date { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px; color: var(--sky-deep); opacity: 0.75; }
+  .history-date { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px; color: var(--sky-deep); opacity: 0.8; }
   .history-exercises { font-size: 14px; color: var(--mid-text); font-style: italic; margin-top: 4px; }
-
   .history-badge {
     position: absolute; top: 12px; right: 14px;
-    background: linear-gradient(135deg, var(--heart), var(--pink));
+    background: linear-gradient(135deg, var(--pink-deep), var(--pink));
     border-radius: 20px; padding: 3px 10px;
     font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 1px; color: white;
   }
 
-  /* ── Progress ── */
   .progress-section { margin-top: 32px; }
-
   .progress-card {
-    background: rgba(255,255,255,0.78);
+    background: var(--white-card);
     border: 1.5px solid rgba(174,224,245,0.4);
-    border-radius: 14px;
-    padding: 16px; margin-bottom: 12px;
-    box-shadow: 0 2px 10px rgba(90,175,212,0.07);
+    border-radius: 14px; padding: 16px; margin-bottom: 12px;
+    box-shadow: 0 2px 10px rgba(74,168,207,0.07);
   }
-
   .progress-exercise-name { font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: var(--dark-text); margin-bottom: 10px; }
-
   .mini-chart { display: flex; align-items: flex-end; gap: 6px; height: 50px; }
-
   .mini-bar {
     flex: 1;
-    background: linear-gradient(to top, var(--heart), var(--sky-deep));
-    border-radius: 4px 4px 0 0;
-    min-height: 4px; position: relative; transition: height 0.5s;
+    background: linear-gradient(to top, var(--pink-deep), var(--sky-deep));
+    border-radius: 4px 4px 0 0; min-height: 4px;
+    position: relative; transition: height 0.5s;
   }
   .mini-bar::after {
     content: attr(data-val);
-    position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%);
-    font-size: 9px; color: rgba(90,175,212,0.7); white-space: nowrap;
+    position: absolute; bottom: -18px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px; color: rgba(74,168,207,0.7); white-space: nowrap;
   }
 
-  /* ── Cycle ── */
   .cycle-section {
     margin-top: 32px; padding: 22px;
     background: rgba(255,255,255,0.7);
     border: 1.5px solid rgba(174,224,245,0.5);
     border-radius: 16px;
-    box-shadow: 0 2px 14px rgba(90,175,212,0.09);
+    box-shadow: 0 2px 14px rgba(74,168,207,0.09);
   }
-
   .cycle-info { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
   .cycle-stat { text-align: center; }
-
   .cycle-num {
     font-family: 'Cinzel', serif; font-size: 34px;
-    background: linear-gradient(135deg, var(--sky-deep), var(--heart));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    line-height: 1;
+    background: linear-gradient(135deg, var(--sky-deep), var(--pink-deep));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; line-height: 1;
   }
-
   .cycle-label { font-size: 10px; letter-spacing: 2px; color: var(--mid-text); opacity: 0.5; text-transform: uppercase; font-family: 'Cinzel', serif; margin-top: 5px; }
-
   .cycle-progress-bar { height: 5px; background: rgba(174,224,245,0.3); border-radius: 3px; margin-bottom: 16px; overflow: hidden; }
   .cycle-progress-fill { height: 100%; background: linear-gradient(to right, var(--sky-deep), var(--heart)); border-radius: 3px; transition: width 0.5s; }
 
-  /* ── Toast ── */
   .toast {
     position: fixed; bottom: 30px; left: 50%;
     transform: translateX(-50%) translateY(100px);
-    background: linear-gradient(135deg, var(--heart), var(--pink));
-    color: white;
-    font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--pink-deep), var(--pink));
+    color: white; font-family: 'Cinzel', serif;
+    font-size: 12px; letter-spacing: 2px;
     padding: 14px 26px; border-radius: 30px;
     transition: transform 0.4s; z-index: 999;
-    box-shadow: 0 4px 20px rgba(216,27,122,0.32);
+    box-shadow: 0 4px 20px rgba(233,30,140,0.3);
   }
   .toast.show { transform: translateX(-50%) translateY(0); }
 
-  /* ── Floating Hearts ── */
   .floating-hearts { position: fixed; bottom: -20px; left: 0; right: 0; pointer-events: none; z-index: 999; }
-
   .float-heart {
-    position: absolute; font-size: 20px; color: var(--heart);
+    position: absolute; color: var(--heart);
     animation: float-up 3s ease-in forwards; opacity: 0;
   }
-
   @keyframes float-up {
     0%   { transform: translateY(0) scale(0); opacity: 0; }
     20%  { opacity: 1; transform: translateY(-40px) scale(1); }
@@ -493,80 +382,153 @@
     .workout-meta { grid-template-columns: 1fr; }
     .actions { flex-direction: column; }
     .btn-pink, .btn-sky, .btn-ghost { min-width: 0; }
+    .goddess-crown { width: 240px; height: 128px; }
   }
 </style>
 </head>
 <body>
 <div class="container">
-
-  <!-- ── Header ── -->
   <div class="header">
-
-    <!-- Greek Goddess Laurel Wreath Crown -->
-    <svg class="goddess-crown" viewBox="0 0 210 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Left branch stem -->
-      <path d="M105 82 Q80 66 48 44" stroke="#6B7F44" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <!-- Left leaves (outer) -->
-      <ellipse cx="96"  cy="77" rx="10" ry="5.5" fill="#A4B86A" transform="rotate(-28 96 77)"/>
-      <ellipse cx="85"  cy="70" rx="10" ry="5.5" fill="#8FAD52" transform="rotate(-38 85 70)"/>
-      <ellipse cx="75"  cy="63" rx="10" ry="5.5" fill="#A4B86A" transform="rotate(-48 75 63)"/>
-      <ellipse cx="64"  cy="55" rx="9"  ry="5"   fill="#8FAD52" transform="rotate(-58 64 55)"/>
-      <ellipse cx="55"  cy="48" rx="8.5" ry="4.5" fill="#A4B86A" transform="rotate(-65 55 48)"/>
-      <ellipse cx="47"  cy="41" rx="7.5" ry="4"   fill="#8FAD52" transform="rotate(-72 47 41)"/>
-      <!-- Left leaves (inner, lighter) -->
-      <ellipse cx="90"  cy="73" rx="6.5" ry="3.5" fill="#C5D98A" transform="rotate(-22 90 73)"/>
-      <ellipse cx="80"  cy="66" rx="6.5" ry="3.5" fill="#C5D98A" transform="rotate(-36 80 66)"/>
-      <ellipse cx="70"  cy="59" rx="6.5" ry="3.5" fill="#C5D98A" transform="rotate(-50 70 59)"/>
-      <ellipse cx="60"  cy="51" rx="6"   ry="3"   fill="#C5D98A" transform="rotate(-62 60 51)"/>
-
-      <!-- Right branch stem -->
-      <path d="M105 82 Q130 66 162 44" stroke="#6B7F44" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <!-- Right leaves (outer) -->
-      <ellipse cx="114" cy="77" rx="10" ry="5.5" fill="#A4B86A" transform="rotate(28 114 77)"/>
-      <ellipse cx="125" cy="70" rx="10" ry="5.5" fill="#8FAD52" transform="rotate(38 125 70)"/>
-      <ellipse cx="135" cy="63" rx="10" ry="5.5" fill="#A4B86A" transform="rotate(48 135 63)"/>
-      <ellipse cx="146" cy="55" rx="9"  ry="5"   fill="#8FAD52" transform="rotate(58 146 55)"/>
-      <ellipse cx="155" cy="48" rx="8.5" ry="4.5" fill="#A4B86A" transform="rotate(65 155 48)"/>
-      <ellipse cx="163" cy="41" rx="7.5" ry="4"   fill="#8FAD52" transform="rotate(72 163 41)"/>
-      <!-- Right leaves (inner) -->
-      <ellipse cx="120" cy="73" rx="6.5" ry="3.5" fill="#C5D98A" transform="rotate(22 120 73)"/>
-      <ellipse cx="130" cy="66" rx="6.5" ry="3.5" fill="#C5D98A" transform="rotate(36 130 66)"/>
-      <ellipse cx="140" cy="59" rx="6.5" ry="3.5" fill="#C5D98A" transform="rotate(50 140 59)"/>
-      <ellipse cx="150" cy="51" rx="6"   ry="3"   fill="#C5D98A" transform="rotate(62 150 51)"/>
-
-      <!-- Pink berries left -->
-      <circle cx="50"  cy="42" r="3.5" fill="#E91E8C" opacity="0.85"/>
-      <circle cx="40"  cy="36" r="2.5" fill="#F48FB1" opacity="0.9"/>
-      <circle cx="32"  cy="30" r="2"   fill="#E91E8C" opacity="0.7"/>
-      <!-- Pink berries right -->
-      <circle cx="160" cy="42" r="3.5" fill="#E91E8C" opacity="0.85"/>
-      <circle cx="170" cy="36" r="2.5" fill="#F48FB1" opacity="0.9"/>
-      <circle cx="178" cy="30" r="2"   fill="#E91E8C" opacity="0.7"/>
-
-      <!-- Centre pink heart flower -->
-      <circle cx="105" cy="80" r="8"   fill="#E91E8C" opacity="0.9"/>
-      <circle cx="105" cy="80" r="4.5" fill="#FCE4EC"/>
-      <circle cx="105" cy="80" r="2"   fill="#E91E8C"/>
-      <!-- Petal dots around centre -->
-      <circle cx="105" cy="71" r="2" fill="#F48FB1" opacity="0.8"/>
-      <circle cx="105" cy="89" r="2" fill="#F48FB1" opacity="0.8"/>
-      <circle cx="96"  cy="80" r="2" fill="#F48FB1" opacity="0.8"/>
-      <circle cx="114" cy="80" r="2" fill="#F48FB1" opacity="0.8"/>
-
-      <!-- Upper arc — sky blue accent dots -->
-      <circle cx="105" cy="16" r="3.5" fill="#5AAFD4" opacity="0.8"/>
-      <circle cx="88"  cy="20" r="2.5" fill="#E91E8C" opacity="0.65"/>
-      <circle cx="122" cy="20" r="2.5" fill="#E91E8C" opacity="0.65"/>
-      <circle cx="73"  cy="28" r="2"   fill="#5AAFD4" opacity="0.55"/>
-      <circle cx="137" cy="28" r="2"   fill="#5AAFD4" opacity="0.55"/>
-      <circle cx="60"  cy="38" r="1.5" fill="#F48FB1" opacity="0.5"/>
-      <circle cx="150" cy="38" r="1.5" fill="#F48FB1" opacity="0.5"/>
-
-      <!-- Thin headband -->
-      <path d="M36 88 Q105 95 174 88" stroke="#6B7F44"  stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <path d="M36 88 Q105 99 174 88" stroke="#A4B86A" stroke-width="1"   fill="none" stroke-linecap="round" opacity="0.4"/>
+    <svg class="goddess-crown" viewBox="0 0 320 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#FFF3C4"/>
+          <stop offset="30%"  stop-color="#F5C842"/>
+          <stop offset="65%"  stop-color="#D4A017"/>
+          <stop offset="100%" stop-color="#A67800"/>
+        </linearGradient>
+        <linearGradient id="gGoldBand" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#FFF8D6"/>
+          <stop offset="20%"  stop-color="#F5C842"/>
+          <stop offset="50%"  stop-color="#E8B800"/>
+          <stop offset="80%"  stop-color="#C49A00"/>
+          <stop offset="100%" stop-color="#A67800"/>
+        </linearGradient>
+        <radialGradient id="gPinkGem" cx="35%" cy="30%" r="65%">
+          <stop offset="0%"   stop-color="#FFD6E8"/>
+          <stop offset="30%"  stop-color="#FF80AB"/>
+          <stop offset="70%"  stop-color="#E91E8C"/>
+          <stop offset="100%" stop-color="#880E4F"/>
+        </radialGradient>
+        <radialGradient id="gPinkRound" cx="35%" cy="30%" r="65%">
+          <stop offset="0%"   stop-color="#FFE4F0"/>
+          <stop offset="40%"  stop-color="#F48FB1"/>
+          <stop offset="80%"  stop-color="#E91E8C"/>
+          <stop offset="100%" stop-color="#AD1457"/>
+        </radialGradient>
+        <radialGradient id="gPinkSmall" cx="35%" cy="30%" r="65%">
+          <stop offset="0%"   stop-color="#FFD6E8"/>
+          <stop offset="50%"  stop-color="#F06292"/>
+          <stop offset="100%" stop-color="#C2185B"/>
+        </radialGradient>
+        <linearGradient id="gLeafGold" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#FFF3C4"/>
+          <stop offset="100%" stop-color="#C49A00"/>
+        </linearGradient>
+      </defs>
+      <rect x="8" y="118" width="304" height="42" rx="6" fill="url(#gGoldBand)"/>
+      <rect x="8" y="118" width="304" height="8" fill="rgba(255,255,255,0.3)"/>
+      <rect x="8" y="118" width="304" height="3" fill="rgba(255,255,255,0.55)"/>
+      <rect x="8" y="153" width="304" height="7" fill="rgba(0,0,0,0.18)"/>
+      <circle cx="28"  cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="46"  cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="64"  cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="82"  cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="100" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="118" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="136" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="154" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="172" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="190" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="208" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="226" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="244" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="262" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="280" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <circle cx="298" cy="122" r="2" fill="#FFF3C4" opacity="0.7"/>
+      <ellipse cx="37"  cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <ellipse cx="60"  cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <ellipse cx="83"  cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <ellipse cx="106" cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <circle cx="48"  cy="137" r="4.5" fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="0.7"/>
+      <circle cx="48"  cy="137" r="2"   fill="rgba(255,255,255,0.45)"/>
+      <circle cx="71"  cy="137" r="4.5" fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="0.7"/>
+      <circle cx="71"  cy="137" r="2"   fill="rgba(255,255,255,0.45)"/>
+      <circle cx="94"  cy="137" r="4.5" fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="0.7"/>
+      <circle cx="94"  cy="137" r="2"   fill="rgba(255,255,255,0.45)"/>
+      <ellipse cx="214" cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <ellipse cx="237" cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <ellipse cx="260" cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <ellipse cx="283" cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <circle cx="225" cy="137" r="4.5" fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="0.7"/>
+      <circle cx="225" cy="137" r="2"   fill="rgba(255,255,255,0.45)"/>
+      <circle cx="248" cy="137" r="4.5" fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="0.7"/>
+      <circle cx="248" cy="137" r="2"   fill="rgba(255,255,255,0.45)"/>
+      <circle cx="271" cy="137" r="4.5" fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="0.7"/>
+      <circle cx="271" cy="137" r="2"   fill="rgba(255,255,255,0.45)"/>
+      <ellipse cx="137" cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <ellipse cx="160" cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <ellipse cx="183" cy="137" rx="9" ry="5" fill="url(#gLeafGold)" stroke="#A67800" stroke-width="0.7"/>
+      <circle cx="148" cy="137" r="4.5" fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="0.7"/>
+      <circle cx="148" cy="137" r="2"   fill="rgba(255,255,255,0.45)"/>
+      <circle cx="171" cy="137" r="4.5" fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="0.7"/>
+      <circle cx="171" cy="137" r="2"   fill="rgba(255,255,255,0.45)"/>
+      <circle cx="28"  cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="54"  cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="80"  cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="106" cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="132" cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="160" cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="188" cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="214" cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="240" cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="266" cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <circle cx="292" cy="152" r="1.8" fill="#FFF3C4" opacity="0.55"/>
+      <path d="M10 120 L10 95 Q10 78 28 68 Q42 60 48 52 Q52 44 48 36 L56 30 L64 36 Q60 44 64 52 Q70 60 84 68 Q102 78 102 95 L102 120 Z" fill="url(#gGold)" stroke="#A67800" stroke-width="1.2"/>
+      <path d="M102 120 L102 105 Q102 85 118 74 Q128 66 132 56 Q136 44 132 32 L140 24 L148 32 Q144 44 148 56 Q152 66 162 74 Q178 85 178 105 L178 120 Z" fill="url(#gGold)" stroke="#A67800" stroke-width="1.2"/>
+      <path d="M178 120 L178 108 Q178 88 194 76 Q202 68 204 56 Q206 40 200 24 L160 8 Q155 4 150 6 L140 2 L130 6 Q125 4 120 8 L80 24 Q74 40 76 56 Q78 68 86 76 Q102 88 102 108 L102 120" fill="url(#gGold)" stroke="#A67800" stroke-width="1.2"/>
+      <path d="M178 120 L178 105 Q178 85 194 74 Q204 66 208 56 Q212 44 208 32 L216 24 L224 32 Q220 44 224 56 Q228 66 238 74 Q254 85 254 105 L254 120 Z" fill="url(#gGold)" stroke="#A67800" stroke-width="1.2"/>
+      <path d="M254 120 L254 95 Q254 78 272 68 Q286 60 292 52 Q296 44 292 36 L300 30 L308 36 Q304 44 308 52 Q314 60 328 68 Q346 78 346 95 L346 120 Z" fill="url(#gGold)" stroke="#A67800" stroke-width="1.2" transform="translate(-36,0)"/>
+      <g transform="translate(54,68) rotate(-12)">
+        <ellipse cx="0" cy="0" rx="11" ry="16" fill="url(#gPinkGem)" stroke="#880E4F" stroke-width="1"/>
+        <ellipse cx="-3" cy="-5" rx="5" ry="7" fill="rgba(255,255,255,0.3)" transform="rotate(-10)"/>
+        <ellipse cx="-2" cy="-6" rx="2" ry="3.5" fill="rgba(255,255,255,0.55)" transform="rotate(-10)"/>
+      </g>
+      <g transform="translate(117,56) rotate(-5)">
+        <ellipse cx="0" cy="0" rx="13" ry="19" fill="url(#gPinkGem)" stroke="#880E4F" stroke-width="1.1"/>
+        <ellipse cx="-3" cy="-6" rx="6" ry="8" fill="rgba(255,255,255,0.3)" transform="rotate(-8)"/>
+        <ellipse cx="-2" cy="-7" rx="2.5" ry="4" fill="rgba(255,255,255,0.55)" transform="rotate(-8)"/>
+      </g>
+      <g transform="translate(160,42) rotate(0)">
+        <ellipse cx="0" cy="0" rx="15" ry="22" fill="url(#gPinkGem)" stroke="#880E4F" stroke-width="1.3"/>
+        <ellipse cx="-4" cy="-7" rx="7" ry="10" fill="rgba(255,255,255,0.3)" transform="rotate(-8)"/>
+        <ellipse cx="-3" cy="-8" rx="3" ry="5" fill="rgba(255,255,255,0.6)" transform="rotate(-8)"/>
+      </g>
+      <g transform="translate(203,56) rotate(5)">
+        <ellipse cx="0" cy="0" rx="13" ry="19" fill="url(#gPinkGem)" stroke="#880E4F" stroke-width="1.1"/>
+        <ellipse cx="-3" cy="-6" rx="6" ry="8" fill="rgba(255,255,255,0.3)" transform="rotate(8)"/>
+        <ellipse cx="-2" cy="-7" rx="2.5" ry="4" fill="rgba(255,255,255,0.55)" transform="rotate(8)"/>
+      </g>
+      <g transform="translate(266,68) rotate(12)">
+        <ellipse cx="0" cy="0" rx="11" ry="16" fill="url(#gPinkGem)" stroke="#880E4F" stroke-width="1"/>
+        <ellipse cx="-3" cy="-5" rx="5" ry="7" fill="rgba(255,255,255,0.3)" transform="rotate(10)"/>
+        <ellipse cx="-2" cy="-6" rx="2" ry="3.5" fill="rgba(255,255,255,0.55)" transform="rotate(10)"/>
+      </g>
+      <circle cx="54"  cy="34" r="7"   fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="1"/>
+      <circle cx="51"  cy="31" r="3"   fill="rgba(255,255,255,0.45)"/>
+      <circle cx="117" cy="22" r="8"   fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="1.1"/>
+      <circle cx="113" cy="18" r="3.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="160" cy="10" r="10"  fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="1.3"/>
+      <circle cx="156" cy="6"  r="4.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="156" cy="6"  r="2.2" fill="rgba(255,255,255,0.75)"/>
+      <circle cx="203" cy="22" r="8"   fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="1.1"/>
+      <circle cx="199" cy="18" r="3.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="266" cy="34" r="7"   fill="url(#gPinkRound)" stroke="#880E4F" stroke-width="1"/>
+      <circle cx="262" cy="30" r="3"   fill="rgba(255,255,255,0.45)"/>
+      <circle cx="102" cy="118" r="5.5" fill="url(#gPinkSmall)" stroke="#880E4F" stroke-width="0.8"/>
+      <circle cx="178" cy="118" r="5.5" fill="url(#gPinkSmall)" stroke="#880E4F" stroke-width="0.8"/>
+      <circle cx="254" cy="118" r="5.5" fill="url(#gPinkSmall)" stroke="#880E4F" stroke-width="0.8"/>
     </svg>
-
     <h1>GODDESS WORKOUT</h1>
     <div class="header-sub">For My Darling</div>
     <div class="hearts-row">♥ ♥ ♥ ♥ ♥</div>
@@ -574,33 +536,18 @@
 
   <div class="divider"></div>
 
-  <!-- ── Meta ── -->
   <div class="workout-meta">
-    <div class="meta-card">
-      <div class="meta-label">Today's Date</div>
-      <div class="meta-value" id="today-date">—</div>
-    </div>
-    <div class="meta-card">
-      <div class="meta-label">Last Workout</div>
-      <div class="meta-value" id="last-workout-display">None yet ♥</div>
-    </div>
-    <div class="meta-card">
-      <div class="meta-label">Total Sessions</div>
-      <div class="meta-value" id="total-sessions">0</div>
-    </div>
-    <div class="meta-card">
-      <div class="meta-label">Current Cycle</div>
-      <div class="meta-value" id="current-cycle-display">Cycle 1</div>
-    </div>
+    <div class="meta-card"><div class="meta-label">Today's Date</div><div class="meta-value" id="today-date">—</div></div>
+    <div class="meta-card"><div class="meta-label">Last Workout</div><div class="meta-value" id="last-workout-display">None yet ♥</div></div>
+    <div class="meta-card"><div class="meta-label">Total Sessions</div><div class="meta-value" id="total-sessions">0</div></div>
+    <div class="meta-card"><div class="meta-label">Current Cycle</div><div class="meta-value" id="current-cycle-display">Cycle 1</div></div>
   </div>
 
-  <!-- ── Tab Bar ── -->
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('A')">♥ WORKOUT A ♥</button>
     <button class="tab-btn"        onclick="switchTab('B')">♥ WORKOUT B ♥</button>
   </div>
 
-  <!-- ── Workout A ── -->
   <div id="tab-A">
     <div class="exercises-section">
       <h2>— EXERCISES —</h2>
@@ -613,7 +560,6 @@
     </div>
   </div>
 
-  <!-- ── Workout B ── -->
   <div id="tab-B" style="display:none">
     <div class="exercises-section">
       <h2>— EXERCISES —</h2>
@@ -628,22 +574,13 @@
 
   <div class="divider" style="margin-top:32px"></div>
 
-  <!-- ── Cycle Manager ── -->
   <div class="cycle-section">
     <h2>— PROGRAMME CYCLE —</h2>
     <div class="cycle-info">
-      <div class="cycle-stat">
-        <div class="cycle-num" id="cycle-num">1</div>
-        <div class="cycle-label">Current Cycle</div>
-      </div>
-      <div class="cycle-stat">
-        <div class="cycle-num" id="cycle-weeks">0</div>
-        <div class="cycle-label">Weeks In</div>
-      </div>
+      <div class="cycle-stat"><div class="cycle-num" id="cycle-num">1</div><div class="cycle-label">Current Cycle</div></div>
+      <div class="cycle-stat"><div class="cycle-num" id="cycle-weeks">0</div><div class="cycle-label">Weeks In</div></div>
     </div>
-    <div class="cycle-progress-bar">
-      <div class="cycle-progress-fill" id="cycle-bar" style="width:0%"></div>
-    </div>
+    <div class="cycle-progress-bar"><div class="cycle-progress-fill" id="cycle-bar" style="width:0%"></div></div>
     <p style="text-align:center;font-style:italic;font-size:13px;color:rgba(44,80,100,0.45);margin-bottom:16px">Cycles run 4–6 weeks. Change workouts when ready, my Goddess.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
       <button class="btn-ghost" onclick="newCycle()"   style="flex:1">✿ START NEW CYCLE</button>
@@ -651,312 +588,125 @@
     </div>
   </div>
 
-  <!-- ── History ── -->
   <div class="history-section">
     <h2>— ROYAL RECORD —</h2>
-    <div id="history-list">
-      <p style="text-align:center;font-style:italic;font-size:14px;color:rgba(90,175,212,0.5)">Your completed sessions will appear here ♥</p>
-    </div>
+    <div id="history-list"><p style="text-align:center;font-style:italic;font-size:14px;color:rgba(74,168,207,0.5)">Your completed sessions will appear here ♥</p></div>
   </div>
 
-  <!-- ── Progress ── -->
   <div class="progress-section">
     <h2>— PROGRESS ♥ —</h2>
-    <div id="progress-list">
-      <p style="text-align:center;font-style:italic;font-size:14px;color:rgba(90,175,212,0.5)">Track your strength journey, my Goddess ♥</p>
-    </div>
+    <div id="progress-list"><p style="text-align:center;font-style:italic;font-size:14px;color:rgba(74,168,207,0.5)">Track your strength journey, my Goddess ♥</p></div>
   </div>
-
 </div>
 
 <div class="toast" id="toast">Saved ♥</div>
 <div class="floating-hearts" id="floating-hearts"></div>
 
 <script>
-// ── State ─────────────────────────────────────────────────────────────────────
-let state = {
-  cycle: 1, cycleStart: new Date().toISOString(),
-  totalSessions: 0, lastWorkout: null,
-  history: [], workouts: { A: { exercises: [] }, B: { exercises: [] } }
-};
+let state = { cycle:1, cycleStart:new Date().toISOString(), totalSessions:0, lastWorkout:null, history:[], workouts:{A:{exercises:[]},B:{exercises:[]}} };
 let currentTab = 'A';
 
-// ── Init ──────────────────────────────────────────────────────────────────────
 function init() {
   const saved = localStorage.getItem('goddess-workout-v1');
   if (saved) { try { state = JSON.parse(saved); } catch(e) {} }
   if (!state.workouts.A.exercises.length) state.workouts.A.exercises = defaultExercises('A');
   if (!state.workouts.B.exercises.length) state.workouts.B.exercises = defaultExercises('B');
   document.getElementById('today-date').textContent = fmtDate(new Date());
-  updateMeta(); renderExercises('A'); renderExercises('B');
-  renderHistory(); renderProgress(); updateCycleUI();
+  updateMeta(); renderExercises('A'); renderExercises('B'); renderHistory(); renderProgress(); updateCycleUI();
 }
 
 function defaultExercises(tab) {
   const a = [
-    { id: uid(), name: 'Squat',             sets: [es(),es(),es()], notes: '' },
-    { id: uid(), name: 'Bench Press',       sets: [es(),es(),es()], notes: '' },
-    { id: uid(), name: 'Bent-Over Row',     sets: [es(),es(),es()], notes: '' },
-    { id: uid(), name: 'Overhead Press',    sets: [es(),es()],      notes: '' },
-    { id: uid(), name: 'Romanian Deadlift', sets: [es(),es()],      notes: '' },
+    {id:uid(),name:'Squat',sets:[es(),es(),es()],notes:''},
+    {id:uid(),name:'Bench Press',sets:[es(),es(),es()],notes:''},
+    {id:uid(),name:'Bent-Over Row',sets:[es(),es(),es()],notes:''},
+    {id:uid(),name:'Overhead Press',sets:[es(),es()],notes:''},
+    {id:uid(),name:'Romanian Deadlift',sets:[es(),es()],notes:''}
   ];
   const b = [
-    { id: uid(), name: 'Deadlift',               sets: [es(),es(),es()], notes: '' },
-    { id: uid(), name: 'Incline Dumbbell Press', sets: [es(),es(),es()], notes: '' },
-    { id: uid(), name: 'Lat Pulldown',           sets: [es(),es(),es()], notes: '' },
-    { id: uid(), name: 'Lunges',                 sets: [es(),es()],      notes: '' },
-    { id: uid(), name: 'Cable Fly',              sets: [es(),es()],      notes: '' },
+    {id:uid(),name:'Deadlift',sets:[es(),es(),es()],notes:''},
+    {id:uid(),name:'Incline Dumbbell Press',sets:[es(),es(),es()],notes:''},
+    {id:uid(),name:'Lat Pulldown',sets:[es(),es(),es()],notes:''},
+    {id:uid(),name:'Lunges',sets:[es(),es()],notes:''},
+    {id:uid(),name:'Cable Fly',sets:[es(),es()],notes:''}
   ];
-  return tab === 'A' ? a : b;
+  return tab==='A'?a:b;
 }
 
-function es()  { return { weight: '', reps: '', tut: '' }; }
+function es() { return {weight:'',reps:'',tut:''}; }
 function uid() { return Math.random().toString(36).slice(2,9); }
 function fmtDate(d) { return d.toLocaleDateString('en-AU',{weekday:'short',day:'numeric',month:'short',year:'numeric'}); }
-function save() { localStorage.setItem('goddess-workout-v1', JSON.stringify(state)); }
+function save() { localStorage.setItem('goddess-workout-v1',JSON.stringify(state)); }
 
-// ── Render ────────────────────────────────────────────────────────────────────
 function renderExercises(tab) {
-  const c = document.getElementById('exercises-' + tab);
-  c.innerHTML = '';
-  state.workouts[tab].exercises.forEach(ex => c.appendChild(buildExerciseCard(tab, ex)));
+  const c = document.getElementById('exercises-'+tab);
+  c.innerHTML='';
+  state.workouts[tab].exercises.forEach(ex=>c.appendChild(buildExerciseCard(tab,ex)));
 }
 
-function buildExerciseCard(tab, ex) {
-  const div = document.createElement('div');
-  div.className = 'exercise-card';
-  div.id = 'ex-card-' + ex.id;
-  div.innerHTML = `
-    <div class="exercise-header" onclick="toggleEx('${ex.id}')">
-      <span class="exercise-heart">♥</span>
-      <input class="exercise-name-input" type="text" value="${esc(ex.name)}" placeholder="Exercise name…"
-        onclick="event.stopPropagation()" onchange="updateExName('${tab}','${ex.id}',this.value)">
-      <button class="exercise-toggle open" id="tog-${ex.id}">▾</button>
-    </div>
-    <div class="exercise-body open" id="body-${ex.id}">
-      <table class="sets-table">
-        <thead><tr><th>SET</th><th>WEIGHT (kg)</th><th>REPS</th><th>TUT (sec)</th><th>PREV</th><th></th></tr></thead>
-        <tbody id="sets-${ex.id}"></tbody>
-      </table>
-      <button class="add-set-btn" onclick="addSet('${tab}','${ex.id}')">+ ADD SET</button>
-      <textarea class="exercise-notes" placeholder="Notes, feel, form cues… ♥" rows="2"
-        onchange="updateNotes('${tab}','${ex.id}',this.value)">${esc(ex.notes||'')}</textarea>
-      <div style="text-align:right;margin-top:8px">
-        <button onclick="removeEx('${tab}','${ex.id}')"
-          style="background:none;border:none;color:rgba(216,27,122,0.35);font-size:11px;letter-spacing:1px;font-family:Cinzel,serif;cursor:pointer">
-          REMOVE ✕</button>
-      </div>
-    </div>`;
-  const tbody = div.querySelector('#sets-' + ex.id);
-  ex.sets.forEach((set, si) => {
-    const prev = getLastEx(tab, ex.name);
-    tbody.appendChild(buildRow(tab, ex.id, si, set, prev ? prev.sets[si] : null));
-  });
+function buildExerciseCard(tab,ex) {
+  const div=document.createElement('div');
+  div.className='exercise-card'; div.id='ex-card-'+ex.id;
+  div.innerHTML=`<div class="exercise-header" onclick="toggleEx('${ex.id}')"><span class="exercise-heart">♥</span><input class="exercise-name-input" type="text" value="${esc(ex.name)}" placeholder="Exercise name…" onclick="event.stopPropagation()" onchange="updateExName('${tab}','${ex.id}',this.value)"><button class="exercise-toggle open" id="tog-${ex.id}">▾</button></div><div class="exercise-body open" id="body-${ex.id}"><table class="sets-table"><thead><tr><th>SET</th><th>WEIGHT (kg)</th><th>REPS</th><th>TUT (sec)</th><th>PREV</th><th></th></tr></thead><tbody id="sets-${ex.id}"></tbody></table><button class="add-set-btn" onclick="addSet('${tab}','${ex.id}')">+ ADD SET</button><textarea class="exercise-notes" placeholder="Notes, feel, form cues… ♥" rows="2" onchange="updateNotes('${tab}','${ex.id}',this.value)">${esc(ex.notes||'')}</textarea><div style="text-align:right;margin-top:8px"><button onclick="removeEx('${tab}','${ex.id}')" style="background:none;border:none;color:rgba(240,98,146,0.35);font-size:11px;letter-spacing:1px;font-family:Cinzel,serif;cursor:pointer">REMOVE ✕</button></div></div>`;
+  const tbody=div.querySelector('#sets-'+ex.id);
+  ex.sets.forEach((set,si)=>{const prev=getLastEx(tab,ex.name);tbody.appendChild(buildRow(tab,ex.id,si,set,prev?prev.sets[si]:null));});
   return div;
 }
 
-function buildRow(tab, exId, si, set, prev) {
-  const tr = document.createElement('tr');
-  const prevText = prev ? `${prev.weight}kg×${prev.reps}` : '—';
-  tr.innerHTML = `
-    <td style="color:var(--heart);font-family:Cinzel,serif;font-size:12px">${si+1}</td>
-    <td><input type="number" step="0.5" min="0" value="${esc(set.weight)}" placeholder="0"
-      onchange="updateSet('${tab}','${exId}',${si},'weight',this.value)"></td>
-    <td><input type="number" min="0" value="${esc(set.reps)}" placeholder="0"
-      onchange="updateSet('${tab}','${exId}',${si},'reps',this.value)"></td>
-    <td><input type="number" min="0" value="${esc(set.tut)}" placeholder="0"
-      onchange="updateSet('${tab}','${exId}',${si},'tut',this.value)"></td>
-    <td><span class="last-val">${prevText}</span></td>
-    <td><button class="del-set-btn" onclick="removeSet('${tab}','${exId}',${si})">✕</button></td>`;
+function buildRow(tab,exId,si,set,prev) {
+  const tr=document.createElement('tr');
+  const prevText=prev?`${prev.weight}kg×${prev.reps}`:'—';
+  tr.innerHTML=`<td style="color:var(--heart);font-family:Cinzel,serif;font-size:12px">${si+1}</td><td><input type="number" step="0.5" min="0" value="${esc(set.weight)}" placeholder="0" onchange="updateSet('${tab}','${exId}',${si},'weight',this.value)"></td><td><input type="number" min="0" value="${esc(set.reps)}" placeholder="0" onchange="updateSet('${tab}','${exId}',${si},'reps',this.value)"></td><td><input type="number" min="0" value="${esc(set.tut)}" placeholder="0" onchange="updateSet('${tab}','${exId}',${si},'tut',this.value)"></td><td><span class="last-val">${prevText}</span></td><td><button class="del-set-btn" onclick="removeSet('${tab}','${exId}',${si})">✕</button></td>`;
   return tr;
 }
 
-function toggleEx(id) {
-  const body = document.getElementById('body-' + id);
-  const tog  = document.getElementById('tog-' + id);
-  const open = body.classList.contains('open');
-  body.classList.toggle('open', !open);
-  tog.classList.toggle('open', !open);
-}
-
-function addExercise(tab) {
-  const ex = { id: uid(), name: '', sets: [es(),es(),es()], notes: '' };
-  state.workouts[tab].exercises.push(ex);
-  save(); renderExercises(tab);
-  setTimeout(() => { const c = document.getElementById('ex-card-'+ex.id); if(c) c.querySelector('.exercise-name-input').focus(); }, 50);
-}
-
-function removeEx(tab, id) {
-  state.workouts[tab].exercises = state.workouts[tab].exercises.filter(e => e.id !== id);
-  save(); renderExercises(tab);
-}
-
-function updateExName(tab, id, val) {
-  const ex = state.workouts[tab].exercises.find(e => e.id===id);
-  if (ex) { ex.name = val; save(); }
-}
-
-function updateNotes(tab, id, val) {
-  const ex = state.workouts[tab].exercises.find(e => e.id===id);
-  if (ex) { ex.notes = val; save(); }
-}
-
-function addSet(tab, exId) {
-  const ex = state.workouts[tab].exercises.find(e => e.id===exId);
-  if (!ex) return;
-  ex.sets.push(es()); save();
-  const tbody = document.getElementById('sets-'+exId);
-  if (tbody) { const si = ex.sets.length-1; tbody.appendChild(buildRow(tab, exId, si, ex.sets[si], null)); }
-}
-
-function removeSet(tab, exId, si) {
-  const ex = state.workouts[tab].exercises.find(e => e.id===exId);
-  if (!ex || ex.sets.length <= 1) return;
-  ex.sets.splice(si, 1); save();
-  const card = document.getElementById('ex-card-'+exId);
-  if (card) {
-    const tbody = card.querySelector('#sets-'+exId);
-    tbody.innerHTML = '';
-    const last = getLastEx(tab, ex.name);
-    ex.sets.forEach((set, i) => tbody.appendChild(buildRow(tab, exId, i, set, last ? last.sets[i] : null)));
-  }
-}
-
-function updateSet(tab, exId, si, field, val) {
-  const ex = state.workouts[tab].exercises.find(e => e.id===exId);
-  if (ex && ex.sets[si]) { ex.sets[si][field] = val; save(); }
-}
-
-function saveWorkout(tab) { save(); showToast('Workout saved ♥'); }
+function toggleEx(id) { const body=document.getElementById('body-'+id),tog=document.getElementById('tog-'+id),open=body.classList.contains('open');body.classList.toggle('open',!open);tog.classList.toggle('open',!open); }
+function addExercise(tab) { const ex={id:uid(),name:'',sets:[es(),es(),es()],notes:''};state.workouts[tab].exercises.push(ex);save();renderExercises(tab);setTimeout(()=>{const c=document.getElementById('ex-card-'+ex.id);if(c)c.querySelector('.exercise-name-input').focus();},50); }
+function removeEx(tab,id) { state.workouts[tab].exercises=state.workouts[tab].exercises.filter(e=>e.id!==id);save();renderExercises(tab); }
+function updateExName(tab,id,val) { const ex=state.workouts[tab].exercises.find(e=>e.id===id);if(ex){ex.name=val;save();} }
+function updateNotes(tab,id,val) { const ex=state.workouts[tab].exercises.find(e=>e.id===id);if(ex){ex.notes=val;save();} }
+function addSet(tab,exId) { const ex=state.workouts[tab].exercises.find(e=>e.id===exId);if(!ex)return;ex.sets.push(es());save();const tbody=document.getElementById('sets-'+exId);if(tbody){const si=ex.sets.length-1;tbody.appendChild(buildRow(tab,exId,si,ex.sets[si],null));} }
+function removeSet(tab,exId,si) { const ex=state.workouts[tab].exercises.find(e=>e.id===exId);if(!ex||ex.sets.length<=1)return;ex.sets.splice(si,1);save();const card=document.getElementById('ex-card-'+exId);if(card){const tbody=card.querySelector('#sets-'+exId);tbody.innerHTML='';const last=getLastEx(tab,ex.name);ex.sets.forEach((set,i)=>tbody.appendChild(buildRow(tab,exId,i,set,last?last.sets[i]:null)));} }
+function updateSet(tab,exId,si,field,val) { const ex=state.workouts[tab].exercises.find(e=>e.id===exId);if(ex&&ex.sets[si]){ex.sets[si][field]=val;save();} }
+function saveWorkout(tab) { save();showToast('Workout saved ♥'); }
 
 function completeWorkout(tab) {
-  const now = new Date();
-  state.history.unshift({
-    date: now.toISOString(), tab, cycle: state.cycle,
-    exercises: state.workouts[tab].exercises.map(ex => ({ name: ex.name, sets: ex.sets.map(s=>({...s})) }))
-  });
-  state.totalSessions++;
-  state.lastWorkout = { date: now.toISOString(), tab };
-  save(); updateMeta(); renderHistory(); renderProgress();
-  launchHearts();
+  const now=new Date();
+  state.history.unshift({date:now.toISOString(),tab,cycle:state.cycle,exercises:state.workouts[tab].exercises.map(ex=>({name:ex.name,sets:ex.sets.map(s=>({...s}))}))});
+  state.totalSessions++;state.lastWorkout={date:now.toISOString(),tab};
+  save();updateMeta();renderHistory();renderProgress();launchHearts();
   showToast("Workout Complete! You're a Goddess ✿♥");
 }
 
-function getLastEx(tab, name) {
-  for (const h of state.history) {
-    if (h.tab === tab) { const ex = h.exercises.find(e => e.name===name); if (ex) return ex; }
-  }
-  return null;
-}
+function getLastEx(tab,name) { for(const h of state.history){if(h.tab===tab){const ex=h.exercises.find(e=>e.name===name);if(ex)return ex;}}return null; }
 
 function updateMeta() {
-  document.getElementById('total-sessions').textContent = state.totalSessions;
-  if (state.lastWorkout) {
-    const d = new Date(state.lastWorkout.date);
-    document.getElementById('last-workout-display').textContent = `Workout ${state.lastWorkout.tab} — ${fmtDate(d)}`;
-  }
-  document.getElementById('current-cycle-display').textContent = `Cycle ${state.cycle}`;
+  document.getElementById('total-sessions').textContent=state.totalSessions;
+  if(state.lastWorkout){const d=new Date(state.lastWorkout.date);document.getElementById('last-workout-display').textContent=`Workout ${state.lastWorkout.tab} — ${fmtDate(d)}`;}
+  document.getElementById('current-cycle-display').textContent=`Cycle ${state.cycle}`;
 }
 
 function renderHistory() {
-  const el = document.getElementById('history-list');
-  if (!state.history.length) { el.innerHTML='<p style="text-align:center;font-style:italic;font-size:14px;color:rgba(90,175,212,0.5)">Your completed sessions will appear here ♥</p>'; return; }
-  el.innerHTML = state.history.slice(0,10).map(h => {
-    const d = new Date(h.date);
-    const names = h.exercises.map(e=>e.name).join(', ');
-    const totalSets = h.exercises.reduce((a,e)=>a+e.sets.length,0);
-    return `<div class="history-entry">
-      <span class="history-badge">Workout ${h.tab} · Cycle ${h.cycle}</span>
-      <div class="history-date">${fmtDate(d)}</div>
-      <div class="history-exercises">${names}</div>
-      <div style="font-size:11px;color:rgba(90,175,212,0.65);margin-top:4px;font-family:Cinzel,serif;letter-spacing:1px">${totalSets} total sets</div>
-    </div>`;
-  }).join('');
+  const el=document.getElementById('history-list');
+  if(!state.history.length){el.innerHTML='<p style="text-align:center;font-style:italic;font-size:14px;color:rgba(74,168,207,0.5)">Your completed sessions will appear here ♥</p>';return;}
+  el.innerHTML=state.history.slice(0,10).map(h=>{const d=new Date(h.date);const names=h.exercises.map(e=>e.name).join(', ');const totalSets=h.exercises.reduce((a,e)=>a+e.sets.length,0);return`<div class="history-entry"><span class="history-badge">Workout ${h.tab} · Cycle ${h.cycle}</span><div class="history-date">${fmtDate(d)}</div><div class="history-exercises">${names}</div><div style="font-size:11px;color:rgba(74,168,207,0.65);margin-top:4px;font-family:Cinzel,serif;letter-spacing:1px">${totalSets} total sets</div></div>`;}).join('');
 }
 
 function renderProgress() {
-  const el = document.getElementById('progress-list');
-  const exMap = {};
-  [...state.history].reverse().forEach(session => {
-    session.exercises.forEach(ex => {
-      if (!ex.name) return;
-      if (!exMap[ex.name]) exMap[ex.name] = [];
-      const maxW = Math.max(...ex.sets.map(s=>parseFloat(s.weight)||0));
-      exMap[ex.name].push({ date: session.date, maxWeight: maxW });
-    });
-  });
-  const names = Object.keys(exMap);
-  if (!names.length) { el.innerHTML='<p style="text-align:center;font-style:italic;font-size:14px;color:rgba(90,175,212,0.5)">Track your strength journey, my Goddess ♥</p>'; return; }
-  el.innerHTML = names.slice(0,6).map(name => {
-    const data = exMap[name].slice(-6);
-    const maxW = Math.max(...data.map(d=>d.maxWeight),1);
-    const bars = data.map(d => {
-      const h = Math.max(8, Math.round((d.maxWeight/maxW)*50));
-      return `<div class="mini-bar" style="height:${h}px" data-val="${d.maxWeight?d.maxWeight+'kg':'—'}"></div>`;
-    }).join('');
-    const latest = data[data.length-1];
-    return `<div class="progress-card">
-      <div class="progress-exercise-name">${esc(name)}</div>
-      <div style="font-size:11px;color:var(--sky-deep);margin-bottom:12px;font-family:Cinzel,serif;letter-spacing:1px">Best: ${latest?latest.maxWeight+' kg':'—'}</div>
-      <div class="mini-chart">${bars}</div>
-      <div style="height:22px"></div>
-    </div>`;
-  }).join('');
+  const el=document.getElementById('progress-list');const exMap={};
+  [...state.history].reverse().forEach(session=>{session.exercises.forEach(ex=>{if(!ex.name)return;if(!exMap[ex.name])exMap[ex.name]=[];const maxW=Math.max(...ex.sets.map(s=>parseFloat(s.weight)||0));exMap[ex.name].push({date:session.date,maxWeight:maxW});});});
+  const names=Object.keys(exMap);
+  if(!names.length){el.innerHTML='<p style="text-align:center;font-style:italic;font-size:14px;color:rgba(74,168,207,0.5)">Track your strength journey, my Goddess ♥</p>';return;}
+  el.innerHTML=names.slice(0,6).map(name=>{const data=exMap[name].slice(-6);const maxW=Math.max(...data.map(d=>d.maxWeight),1);const bars=data.map(d=>{const h=Math.max(8,Math.round((d.maxWeight/maxW)*50));return`<div class="mini-bar" style="height:${h}px" data-val="${d.maxWeight?d.maxWeight+'kg':'—'}"></div>`;}).join('');const latest=data[data.length-1];return`<div class="progress-card"><div class="progress-exercise-name">${esc(name)}</div><div style="font-size:11px;color:var(--sky-deep);margin-bottom:12px;font-family:Cinzel,serif;letter-spacing:1px">Best: ${latest?latest.maxWeight+' kg':'—'}</div><div class="mini-chart">${bars}</div><div style="height:22px"></div></div>`;}).join('');
 }
 
-function updateCycleUI() {
-  document.getElementById('cycle-num').textContent = state.cycle;
-  const weeks = Math.floor((new Date() - new Date(state.cycleStart)) / (7*24*3600*1000));
-  document.getElementById('cycle-weeks').textContent = weeks;
-  document.getElementById('cycle-bar').style.width = Math.min(100,(weeks/6)*100) + '%';
-}
-
-function newCycle() {
-  if (!confirm('Start a new training cycle?')) return;
-  state.cycle++; state.cycleStart = new Date().toISOString();
-  save(); updateCycleUI(); updateMeta();
-  showToast('New cycle begins! Shine on, Goddess ✿');
-}
-
-function switchTab(tab) {
-  currentTab = tab;
-  document.getElementById('tab-A').style.display = tab==='A' ? '' : 'none';
-  document.getElementById('tab-B').style.display = tab==='B' ? '' : 'none';
-  document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active',(i===0&&tab==='A')||(i===1&&tab==='B')));
-}
-
-function exportData() {
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));
-  a.download = `goddess-workout-cycle${state.cycle}.json`;
-  a.click();
-}
-
-function esc(str) {
-  if (!str) return '';
-  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3200);
-}
-
-function launchHearts() {
-  const c = document.getElementById('floating-hearts');
-  for (let i=0; i<14; i++) {
-    setTimeout(() => {
-      const h = document.createElement('div');
-      h.className = 'float-heart';
-      h.textContent = ['♥','♡','💕','💗','💓','💖'][Math.floor(Math.random()*6)];
-      h.style.left = Math.random()*100 + 'vw';
-      h.style.animationDelay = (Math.random()*0.6) + 's';
-      h.style.fontSize = (14 + Math.random()*22) + 'px';
-      c.appendChild(h); setTimeout(() => h.remove(), 3600);
-    }, i*90);
-  }
-}
+function updateCycleUI() { document.getElementById('cycle-num').textContent=state.cycle;const weeks=Math.floor((new Date()-new Date(state.cycleStart))/(7*24*3600*1000));document.getElementById('cycle-weeks').textContent=weeks;document.getElementById('cycle-bar').style.width=Math.min(100,(weeks/6)*100)+'%'; }
+function newCycle() { if(!confirm('Start a new training cycle?'))return;state.cycle++;state.cycleStart=new Date().toISOString();save();updateCycleUI();updateMeta();showToast('New cycle begins! Shine on, Goddess ✿'); }
+function switchTab(tab) { currentTab=tab;document.getElementById('tab-A').style.display=tab==='A'?'':'none';document.getElementById('tab-B').style.display=tab==='B'?'':'none';document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',(i===0&&tab==='A')||(i===1&&tab==='B'))); }
+function exportData() { const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download=`goddess-workout-cycle${state.cycle}.json`;a.click(); }
+function esc(str) { if(!str)return'';return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function showToast(msg) { const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200); }
+function launchHearts() { const c=document.getElementById('floating-hearts');for(let i=0;i<16;i++){setTimeout(()=>{const h=document.createElement('div');h.className='float-heart';h.textContent=['♥','♡','💕','💗','💓','💖','🩷'][Math.floor(Math.random()*7)];h.style.left=Math.random()*100+'vw';h.style.animationDelay=(Math.random()*0.6)+'s';h.style.fontSize=(14+Math.random()*22)+'px';c.appendChild(h);setTimeout(()=>h.remove(),3600);},i*80);} }
 
 init();
 </script>
